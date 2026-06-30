@@ -12,6 +12,7 @@ struct Student{
     float total;
     float average;
     char grade;
+    char userName;
 };
 struct Student students [MAX_STUDENT];
 char getgrade(float average){
