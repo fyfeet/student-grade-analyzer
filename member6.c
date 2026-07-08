@@ -14,21 +14,15 @@ struct Student
     char grade;
 };
 
-// global variables
 int n;
 int num_sub;
 int num_stu;
-
 
 //=======================
 //       Alex (Member 6)
 //   File Handling & Main Menu
 //=======================
 
-
-
-
-// Our function prototype
 void add_student(struct Student students[]);
 void Individual(struct Student students[]);
 void classstatistics(struct Student students[]);
@@ -38,9 +32,10 @@ int loadFromFile(struct Student students[], int maxSize);
 void saveFinalReport(struct Student students[]);
 
 struct Student students[MAX_STUDENT];
+
 void saveToFile(struct Student students[], int count)
 {
-    FILE *fp = fopen("students.txt", "w"); 
+    FILE *fp = fopen("students.txt", "w");
     if (fp == NULL)
     {
         printf("Error opening file.\n");
@@ -65,7 +60,7 @@ void saveToFile(struct Student students[], int count)
 
 int loadFromFile(struct Student students[], int maxSize)
 {
-    FILE *fp = fopen("students.txt", "r"); // "rb" = read binary
+    FILE *fp = fopen("students.txt", "r");
     if (fp == NULL)
     {
         printf("No saved file found.\n");
@@ -91,7 +86,6 @@ int loadFromFile(struct Student students[], int maxSize)
     printf("Loaded %d student(s) from file.\n", count);
     return count;
 }
-
 
 void saveFinalReport(struct Student students[])
 {
@@ -130,7 +124,6 @@ void saveFinalReport(struct Student students[])
     printf("Report saved to report.txt\n");
 }
 
-
 int main()
 {
     num_stu = loadFromFile(students, MAX_STUDENT);
@@ -149,7 +142,6 @@ int main()
         printf("0. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
-
 
         switch (choice)
         {

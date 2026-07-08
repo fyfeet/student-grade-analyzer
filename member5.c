@@ -1,17 +1,24 @@
 #include <stdio.h>
-#include <string.h>
+
+// constants
 #define MAX_STUDENT 100
-#define MAX_SUBS 20
-struct Student{
-    char name[50];
-    char id[10];
-    float mark[MAX_SUBS];
+#define MAX_SUBS 10
+#define FILENAME "students.txt"
+
+// global variables
+int n;
+int num_sub;
+
+// struct 
+struct Student
+{
+    int id;
+    char name[30];
+    float grades[MAX_SUBS];
     float average;
-    
 };
 struct Student students[MAX_STUDENT];
-int num_sub=0;
-int n ;
+
 void classstatistics() {
      float max_avg = students[0].average;
      float min_avg = students[0].average;
