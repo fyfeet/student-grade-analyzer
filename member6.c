@@ -8,16 +8,6 @@
 
 
 
-
-// Our function prototype
-void add_student(struct Student students[]);
-void Individual(struct Student students[]);
-void classstatistics(struct Student students[]);
-void Allresults(struct Student students[]);
-void saveToFile(struct Student students[], int count);
-int loadFromFile(struct Student students[], int maxSize);
-void saveFinalReport(struct Student students[]);
-
 struct Student students[MAX_STUDENT];
 void saveToFile(struct Student students[], int count)
 {
